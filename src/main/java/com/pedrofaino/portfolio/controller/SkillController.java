@@ -1,9 +1,9 @@
 package com.pedrofaino.portfolio.controller;
 
 import com.pedrofaino.portfolio.dto.dtoSkill;
-import com.pedrofaino.portfolio.model.Skill;
+import com.pedrofaino.portfolio.models.Skill;
 import com.pedrofaino.portfolio.security.Controller.Mensaje;
-import com.pedrofaino.portfolio.service.SkillService;
+import com.pedrofaino.portfolio.services.SkillService;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;

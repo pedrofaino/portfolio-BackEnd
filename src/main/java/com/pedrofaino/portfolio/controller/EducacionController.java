@@ -1,9 +1,9 @@
 package com.pedrofaino.portfolio.controller;
 
 import com.pedrofaino.portfolio.dto.dtoEducacion;
-import com.pedrofaino.portfolio.model.Educacion;
+import com.pedrofaino.portfolio.models.Educacion;
 import com.pedrofaino.portfolio.security.Controller.Mensaje;
-import com.pedrofaino.portfolio.service.EducacionService;
+import com.pedrofaino.portfolio.services.EducacionService;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,8 +62,7 @@ public class EducacionController {
         }
 
         Educacion educacion = new Educacion(
-                dtoeducacion.getNombreEdu(), dtoeducacion.getDescripcionEdu()
-        );
+                dtoeducacion.getNombreEdu(), dtoeducacion.getFecha(), dtoeducacion.getDescripcionEdu(), dtoeducacion.getUrl_foto());
         sEducacion.save(educacion);
         return new ResponseEntity(new Mensaje("Educacion creada"), HttpStatus.OK);
 
@@ -84,6 +83,8 @@ public class EducacionController {
         Educacion educacion = sEducacion.getOne(id).get();
 
         educacion.setNombreEdu(dtoeducacion.getNombreEdu());
+        educacion.setFecha(dtoeducacion.getFecha());
+        educacion.setUrl_foto(dtoeducacion.getUrl_foto());
         educacion.setDescripcionEdu(dtoeducacion.getDescripcionEdu());
 
         sEducacion.save(educacion);

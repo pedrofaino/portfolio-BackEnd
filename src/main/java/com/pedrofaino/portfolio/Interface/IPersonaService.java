@@ -1,6 +1,6 @@
 package com.pedrofaino.portfolio.Interface;
 
-import com.pedrofaino.portfolio.model.Persona;
+import com.pedrofaino.portfolio.models.Persona;
 import java.util.List;
 
 public interface IPersonaService {

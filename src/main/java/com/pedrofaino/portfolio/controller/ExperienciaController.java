@@ -1,9 +1,9 @@
 package com.pedrofaino.portfolio.controller;
 
 import com.pedrofaino.portfolio.dto.dtoExperiencia;
-import com.pedrofaino.portfolio.model.Experiencia;
+import com.pedrofaino.portfolio.models.Experiencia;
 import com.pedrofaino.portfolio.security.Controller.Mensaje;
-import com.pedrofaino.portfolio.service.ExperienciaService;
+import com.pedrofaino.portfolio.services.ExperienciaService;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,7 +60,7 @@ public class ExperienciaController {
             return new ResponseEntity(new Mensaje("Esa experciencia existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Experiencia experiencia = new Experiencia(dtoexp.getNombreExp(), dtoexp.getDescripcionExp());
+        Experiencia experiencia = new Experiencia(dtoexp.getNombreExp(), dtoexp.getPeriodo(),dtoexp.getUrl_logo(), dtoexp.getDescripcionExp());
         experienciaServ.save(experiencia);
 
         return new ResponseEntity(new Mensaje("Experiencia agragada"), HttpStatus.OK);
@@ -83,6 +83,8 @@ public class ExperienciaController {
 
         Experiencia experiencia = experienciaServ.getOne(id).get();
         experiencia.setNombreExp(dtoexp.getNombreExp());
+        experiencia.setPeriodo(dtoexp.getPeriodo());
+        experiencia.setUrl_logo(dtoexp.getUrl_logo());
         experiencia.setDescripcionExp(dtoexp.getDescripcionExp());
 
         experienciaServ.save(experiencia);

@@ -1,7 +1,7 @@
 package com.pedrofaino.portfolio.controller;
 
 import com.pedrofaino.portfolio.Interface.IPersonaService;
-import com.pedrofaino.portfolio.model.Persona;
+import com.pedrofaino.portfolio.models.Persona;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;

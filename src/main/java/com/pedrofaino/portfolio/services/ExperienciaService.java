@@ -1,10 +1,10 @@
-package com.pedrofaino.portfolio.service;
+package com.pedrofaino.portfolio.services;
 
-import com.pedrofaino.portfolio.model.Experiencia;
+import com.pedrofaino.portfolio.models.Experiencia;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.pedrofaino.portfolio.repository.IExperienciaRep;
+import com.pedrofaino.portfolio.repositories.IExperienciaRep;
 import java.util.List;
 import java.util.Optional;
 

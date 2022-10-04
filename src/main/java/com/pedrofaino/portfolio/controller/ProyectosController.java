@@ -1,9 +1,9 @@
 package com.pedrofaino.portfolio.controller;
 
 import com.pedrofaino.portfolio.dto.dtoProyectos;
-import com.pedrofaino.portfolio.model.Proyectos;
+import com.pedrofaino.portfolio.models.Proyectos;
 import com.pedrofaino.portfolio.security.Controller.Mensaje;
-import com.pedrofaino.portfolio.service.ProyectosService;
+import com.pedrofaino.portfolio.services.ProyectosService;
 import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,7 +59,7 @@ public class ProyectosController {
             return new ResponseEntity(new Mensaje("Esa proyecto existe"), HttpStatus.BAD_REQUEST);
         }
 
-        Proyectos proyecto = new Proyectos(dtoPRO.getNombreP(), dtoPRO.getDescripcionP());
+        Proyectos proyecto = new Proyectos(dtoPRO.getNombreP(), dtoPRO.getFecha(), dtoPRO.getLink(), dtoPRO.getDescripcionP());
         proyectoServ.save(proyecto);
 
         return new ResponseEntity(new Mensaje("Proyecto guardado"), HttpStatus.OK);
@@ -82,11 +82,11 @@ public class ProyectosController {
 
         Proyectos proyecto = proyectoServ.getOne(id).get();
         proyecto.setNombreP(dtoPRO.getNombreP());
+        proyecto.setFecha(dtoPRO.getFecha());
+        proyecto.setLink(dtoPRO.getLink());
         proyecto.setDescripcionP(dtoPRO.getDescripcionP());
 
         proyectoServ.save(proyecto);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
     }
-
-     
 }

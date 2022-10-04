@@ -1,7 +1,7 @@
-package com.pedrofaino.portfolio.service;
+package com.pedrofaino.portfolio.services;
 
-import com.pedrofaino.portfolio.model.Skill;
-import com.pedrofaino.portfolio.repository.ISkillRep;
+import com.pedrofaino.portfolio.models.Skill;
+import com.pedrofaino.portfolio.repositories.ISkillRep;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;

@@ -1,9 +1,9 @@
 package com.pedrofaino.portfolio.controller;
 
-import com.pedrofaino.portfolio.model.Imagen;
+import com.pedrofaino.portfolio.models.Imagen;
 import com.pedrofaino.portfolio.security.Controller.Mensaje;
-import com.pedrofaino.portfolio.service.CloudinaryService;
-import com.pedrofaino.portfolio.service.ImagenService;
+import com.pedrofaino.portfolio.services.CloudinaryService;
+import com.pedrofaino.portfolio.services.ImagenService;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.List;

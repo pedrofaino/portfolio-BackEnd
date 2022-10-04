@@ -1,7 +1,7 @@
-package com.pedrofaino.portfolio.service;
+package com.pedrofaino.portfolio.services;
 
-import com.pedrofaino.portfolio.model.Imagen;
-import com.pedrofaino.portfolio.repository.ImagenRep;
+import com.pedrofaino.portfolio.models.Imagen;
+import com.pedrofaino.portfolio.repositories.ImagenRep;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;

@@ -1,6 +1,6 @@
-package com.pedrofaino.portfolio.repository;
+package com.pedrofaino.portfolio.repositories;
 
-import com.pedrofaino.portfolio.model.Skill;
+import com.pedrofaino.portfolio.models.Skill;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

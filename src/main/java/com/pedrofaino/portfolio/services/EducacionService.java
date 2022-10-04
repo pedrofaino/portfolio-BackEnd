@@ -1,7 +1,7 @@
-package com.pedrofaino.portfolio.service;
+package com.pedrofaino.portfolio.services;
 
-import com.pedrofaino.portfolio.model.Educacion;
-import com.pedrofaino.portfolio.repository.IEducacionRep;
+import com.pedrofaino.portfolio.models.Educacion;
+import com.pedrofaino.portfolio.repositories.IEducacionRep;
 import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;

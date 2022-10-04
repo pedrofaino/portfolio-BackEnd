@@ -1,4 +1,4 @@
-package com.pedrofaino.portfolio.model;
+package com.pedrofaino.portfolio.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

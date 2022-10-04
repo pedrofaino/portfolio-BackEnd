@@ -1,4 +1,4 @@
-package com.pedrofaino.portfolio.model;
+package com.pedrofaino.portfolio.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,14 +12,19 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreExp;
+    private String periodo;
+    private String url_logo;
     private String descripcionExp;
+
 
     //Constructores
     public Experiencia() {
     }
 
-    public Experiencia(String nombreExp, String descripcionExp) {
+    public Experiencia(String nombreExp, String periodo, String url_logo, String descripcionExp) {
         this.nombreExp = nombreExp;
+        this.periodo = periodo;
+        this.url_logo = url_logo;
         this.descripcionExp = descripcionExp;
     }
 
@@ -28,9 +33,11 @@ public class Experiencia {
         return id;
     }
 
-    public String getNombreExp() {
-        return nombreExp;
-    }
+    public String getNombreExp() {return nombreExp;}
+
+    public String getPeriodo(){return periodo;}
+
+    public String getUrl_logo(){return url_logo;}
 
     public String getDescripcionExp() {
         return descripcionExp;
@@ -44,6 +51,9 @@ public class Experiencia {
         this.nombreExp = nombreExp;
     }
 
+    public void setPeriodo(String periodo){this.periodo = periodo;}
+
+    public void setUrl_logo(String url_logo){this.url_logo = url_logo;}
     public void setDescripcionExp(String descripcionExp) {
         this.descripcionExp = descripcionExp;
     }

@@ -1,4 +1,4 @@
-package com.pedrofaino.portfolio.service;
+package com.pedrofaino.portfolio.services;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
 import java.io.File;
